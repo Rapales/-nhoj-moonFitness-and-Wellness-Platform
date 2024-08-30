@@ -30,9 +30,9 @@ Route::get('/home', function() {
 Route::get('/login', [LoginController::class, 'loginForm']);
 Route::get('/home', [LoginController::class, 'home'])->name('home');
 
-Route::get('/users', [UserController::class, 'index'])->name('users.index');
-Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
-Route::get('/users/edit/{id}', [UserController::class, 'edit'])->name('users.edit');
+Route::get('/users', [UserController::class, 'index'])->name('Users.index');
+Route::get('/users/create', [UserController::class, 'create'])->name('Users.create');
+Route::get('/users/edit/{id}', [UserController::class, 'edit'])->name('Users.edit');
 
 Route::get('/progress', [ProgressController::class, 'index'])->name('progress.index');
 Route::get('/progress/create', [ProgressController::class, 'create'])->name('progress.create');
