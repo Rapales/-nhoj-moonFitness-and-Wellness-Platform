@@ -29,7 +29,7 @@ class MembersController extends Controller
         $trainers = User::where('role', 'trainer')->pluck('name', 'id');
         $members = User::where('role', 'member')->pluck('name', 'id');
 
-        return view('members.create', compact('trainers', 'members'));
+        return view('Members.create', compact('trainers', 'members'));
     }
 
     /**
@@ -52,7 +52,7 @@ class MembersController extends Controller
 
         $create->save();
 
-        return redirect()->route('members.index')->with('success', 'Created Successfully');
+        return redirect()->route('Members.index')->with('success', 'Created Successfully');
     }
 
     /**
@@ -96,7 +96,7 @@ class MembersController extends Controller
 
         $update->save();
 
-        return redirect()->route('members.index')->with('success', 'Updated Successfully');
+        return redirect()->route('Members.index')->with('success', 'Updated Successfully');
     }
 
     /**
@@ -109,6 +109,6 @@ class MembersController extends Controller
 
         $delete->delete();
 
-        return redirect()->route('members.index')->with('success', 'Deleted Successfully');
+        return redirect()->route('Members.index')->with('success', 'Deleted Successfully');
     }
 }

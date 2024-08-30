@@ -29,7 +29,7 @@ class TrainerController extends Controller
     public function create()
     {
         $users = User::where('role', 'trainer')->pluck('name', 'id');
-        return view('trainers.create', compact('users'));
+        return view('Trainers.create', compact('users'));
     }
 
     /**
@@ -51,7 +51,7 @@ class TrainerController extends Controller
 
         $create->save();
 
-        return redirect()->route('trainers.index')->with('success', 'Created Successfully');
+        return redirect()->route('Trainers.index')->with('success', 'Created Successfully');
     }
 
     /**
@@ -93,7 +93,7 @@ class TrainerController extends Controller
 
         $trainer->save();
 
-        return redirect()->route('trainers.index')->with('success', 'Updated Successfully');
+        return redirect()->route('Trainers.index')->with('success', 'Updated Successfully');
     }
 
     /**
@@ -105,6 +105,6 @@ class TrainerController extends Controller
 
         $trainer->delete();
 
-        return redirect()->route('trainers.index')->with('success', 'Updated Successfully');
+        return redirect()->route('Trainers.index')->with('success', 'Updated Successfully');
     }
 }
