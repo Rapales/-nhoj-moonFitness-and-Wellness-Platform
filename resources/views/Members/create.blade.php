@@ -53,7 +53,7 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-success">Create</button>
-                    <a href="{{ route('members.index') }}" class="btn btn-danger">Back</a>
+                    <a href="{{ route('Members.index') }}" class="btn btn-danger">Back</a>
                 </form>
             </div>
         </div>

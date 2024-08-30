@@ -17,7 +17,7 @@ class MembersController extends Controller
         $members = Members::with('usersMembers')->with('usersTrainers')->orderBy('created_at', 'desc')->get();
 
         // dd($members);
-        return view('members.index', compact('members'));
+        return view('Members.index', compact('members'));
     }
 
     /**
