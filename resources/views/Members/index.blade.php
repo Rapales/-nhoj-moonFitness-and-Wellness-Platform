@@ -11,7 +11,7 @@
                         <h3 class="mb-0">Members</h3>
                     </div>
                     <div class="col-4 text-right">
-                        <a href="{{ route('Members.create') }}" class="btn btn-sm btn-primary">Add new</a>
+                        <a href="{{ route('members.create') }}" class="btn btn-sm btn-primary">Add new</a>
                     </div>
                 </div>
             </div>
