@@ -74,7 +74,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary">Create User</button>
-                <a href="{{ route('users.index') }}" class="btn btn-secondary">Cancel</a>
+                <a href="{{ route('Users.index') }}" class="btn btn-secondary">Cancel</a>
             </form>
         </div>
     </div>
