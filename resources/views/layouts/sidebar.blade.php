@@ -6,7 +6,7 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link " href="{{ route('users.index') }}">
+    <a class="nav-link " href="{{ route('Users.index') }}">
       <i class="ni ni-single-02 text-black"></i> Users
     </a>
   </li>
