@@ -109,4 +109,19 @@ class UserController extends Controller
         User::destroy($id);
         return redirect()->route('Users.index')->with('success', 'User has been deleted successfully!');
     }
+
+    public function userAPI()
+    {
+        $users = User::get();
+        if($users)
+        {
+            return response()->json(['status' => 200,
+            'data' => $users,
+        ]);
+        }else{
+            return response()->json(['status' => 404,
+            'message' => 'Not Found',
+        ]);
+        }
+    }
 }

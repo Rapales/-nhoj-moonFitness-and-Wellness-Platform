@@ -30,3 +30,4 @@ Route::post('/store', [UserController::class, 'store'])->name('users.store');
 Route::delete('users/delete/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 
 Route::get('/profile', [WorkoutPlansController::class, 'trainerWorkoutPlan']);
+Route::get('/allUsers', [UserController::class, 'userAPI']);
