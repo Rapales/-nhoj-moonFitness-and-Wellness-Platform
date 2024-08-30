@@ -21,6 +21,7 @@
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Avatar</th>
                     <th>Name</th>
                     <th>Age</th>
                     <th>Phone Number</th>
