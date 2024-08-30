@@ -20,7 +20,7 @@ class TrainerController extends Controller
 
         // dd($trainers);
 
-        return view('trainers.index', compact('trainers'));
+        return view('Trainers.index', compact('trainers'));
     }
 
     /**
