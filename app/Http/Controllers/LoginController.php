@@ -99,7 +99,7 @@ class LoginController extends Controller
 
     public function loginForm()
     {
-        return view('auth.login');
+        return view('Auth.login');
     }
 
     public function home()
