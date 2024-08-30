@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 
 class LoginController extends Controller
 {
@@ -99,5 +100,10 @@ class LoginController extends Controller
     public function loginForm()
     {
         return view('auth.login');
+    }
+
+    public function home()
+    {
+        return view('home');
     }
 }

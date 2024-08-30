@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\WorkoutPlansController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +23,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/verify', [LoginController::class, 'verifyOtp']);
+
+// Correct the update route to use PUT
+Route::put('users/update/{id}', [UserController::class, 'update'])->name('users.update');
+Route::post('/store', [UserController::class, 'store'])->name('users.store');
+Route::delete('users/delete/{id}', [UserController::class, 'destroy'])->name('users.destroy');
+
+Route::get('/profile', [WorkoutPlansController::class, 'trainerWorkoutPlan']);

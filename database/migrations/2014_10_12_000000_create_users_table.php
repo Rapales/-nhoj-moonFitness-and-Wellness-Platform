@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->string('avatar');
             $table->string('name');
-            $table->string('age')->nullable();
+            $table->integer('age')->nullable();
             $table->string('phone_number')->nullable();
             $table->enum('gender', ['male', 'female', 'others'])->nullable();
             $table->string('otp_code')->nullable();

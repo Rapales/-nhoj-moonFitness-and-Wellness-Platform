@@ -21,13 +21,7 @@
         .hidden {
             display: none;
         }
-    </style>    
-    <script>
-        const token = localStorage.getItem('token');
-        if(token){
-            window.location.href = '/home';
-        } 
-    </script>
+    </style>
 <body class="bg-default">
   <div class="main-content">
     <!-- Navbar -->

@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('trainers', function (Blueprint $table) {
+        Schema::create('progress_tables', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('trainer_id');
-            $table->string('specialization');
-            $table->integer('experience_year');
+            $table->string('member_id');
+            $table->string('workout_img');
+            $table->string('task_status');
+            $table->string('task_description');
             $table->timestamps();
-
-            $table->foreign('trainer_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('trainers');
+        Schema::dropIfExists('progress_tables');
     }
 };

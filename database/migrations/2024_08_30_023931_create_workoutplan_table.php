@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('trainers', function (Blueprint $table) {
+        Schema::create('workoutplan', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('trainer_id');
-            $table->string('specialization');
-            $table->integer('experience_year');
+            $table->string('trainer_id');
+            $table->string('title');
+            $table->string('description');
+            $table->string('duration');
+            $table->string('type');
             $table->timestamps();
-
-            $table->foreign('trainer_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('trainers');
+        Schema::dropIfExists('workoutplan');
     }
 };

@@ -15,10 +15,11 @@ class AdminSeeder extends Seeder
     public function run(): void
     {
         User::factory()->create([
+            'avatar' => "avatars/1234.jpg",
             'role' => 'admin',
             'name' => 'Nelson John Montezo 1',
             'email' => 'nj.montezo08@fwpstudio.com',
-            'age' => '22 yrs old',
+            'age' => '22',
             'phone_number' => '09676159289',
             'gender' => 'Male',
             'password' => Hash::make('pass1234'),
