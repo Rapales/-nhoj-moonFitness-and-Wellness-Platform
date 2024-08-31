@@ -29,7 +29,7 @@
       </button>
       <!-- Brand -->
       <a class="navbar-brand pt-0" href="{{ url('dashboard/index.html') }}">
-        <img src="{{ asset('dashboard/assets/img/brand/blue.png') }}" class="navbar-brand-img" alt="dashboard.">
+        <img src="{{ asset('dashboard/assets/img/brand/fitandwell.png') }}" class="navbar-brand-img" alt="dashboard.">
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">
