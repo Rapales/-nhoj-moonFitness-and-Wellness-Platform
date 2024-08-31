@@ -25,7 +25,7 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::post('/verify', [LoginController::class, 'verifyOtp']);
 
 // Correct the update route to use PUT
-Route::put('users/update/{id}', [UserController::class, 'update'])->name('Users.update');
+Route::put('users/update/{id}', [UserController::class, 'update'])->name('users.update');
 Route::post('/store', [UserController::class, 'store'])->name('users.store');
 Route::delete('users/delete/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 
