@@ -6,7 +6,9 @@ use App\Http\Controllers\ProgressController;
 use App\Http\Controllers\MembersController;
 use App\Http\Controllers\TrainerController;
 use App\Http\Controllers\WorkoutPlansController;
+use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,8 @@ Route::get('/home', function() {
 Route::get('/login', [LoginController::class, 'loginForm']);
 Route::get('/home', [LoginController::class, 'home'])->name('home');
 
+Route::get('/register', [RegistrationController::class, 'showRegistrationForm'])->name('register.form');
+
 Route::get('/users', [UserController::class, 'index'])->name('Users.index');
 Route::get('/users/create', [UserController::class, 'create'])->name('users.create');
 Route::get('/users/edit/{id}', [UserController::class, 'edit'])->name('users.edit');
@@ -40,3 +44,5 @@ Route::get('/progress/create', [ProgressController::class, 'create'])->name('pro
 Route::resource('trainers', TrainerController::class);
 
 Route::resource('members', MembersController::class);
+
+Route::resource('roles', RoleController::class);

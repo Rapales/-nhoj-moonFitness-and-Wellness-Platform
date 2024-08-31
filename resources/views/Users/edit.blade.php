@@ -50,10 +50,10 @@
         <div class="form-group">
             <label for="role">Role</label>
             <select class="form-control" id="role" name="role" required>
-                <option value="Admin" {{ old('role', $users->role) == 'Admin' ? 'selected' : '' }}>Admin</option>
-                <option value="Trainer" {{ old('role', $users->role) == 'Trainer' ? 'selected' : '' }}>Trainer</option>
-                <option value="Member" {{ old('role', $users->role) == 'Member' ? 'selected' : '' }}>Member</option>
-                <option value="Guest" {{ old('role', $users->role) == 'Guest' ? 'selected' : '' }}>Guest</option>
+            <option value="admin" {{ $users->role == 'admin' ? 'selected' : '' }}>admin</option>
+            <option value="trainer" {{ $users->role == 'trainer' ? 'selected' : '' }}>trainer</option>
+            <option value="member" {{ $users->role == 'member' ? 'selected' : '' }}>member</option>
+            <option value="guest" {{ $users->role == 'guest' ? 'selected' : '' }}>guest</option>
             </select>
         </div>
 

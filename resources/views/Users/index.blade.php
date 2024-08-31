@@ -36,8 +36,12 @@
                     <tr>
                         <td>{{ $user->id }}</td>
                         <td>
+                        @if($user->avatar)
                         <img src="{{ asset('storage/' . $user->avatar) }}" style="width: 45px; height: 45px" alt="User Avatar" class="rounded-circle">
-                        </td>
+                    @else
+                    <img src="{{ asset('dashboard/assets/img/fitandwell.png') }}" style="width: 45px; height: 45px" alt="User Avatar" class="rounded-circle">
+                    @endif
+                    </td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->age }}</td>
                         <td>{{ $user->phone_number }}</td>

@@ -10,17 +10,20 @@ use App\Models\User;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\NewUserMail;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $users = User::paginate(10);
         return view('Users.index', compact('users'));
+       
     }
 
     public function create()
     {
+
         return view('Users.create');
     }
 
@@ -76,12 +79,7 @@ class UserController extends Controller
 
     public function update(Request $request, $id): RedirectResponse
     {
-        $user = User::findOrFail($id);
-        {
-            // Find the user by ID
-            $user = User::findOrFail($id);
 
-            // Validate the incoming request
             $validatedData = $request->validate([
                 'avatar' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
                 'name' => 'required|string|max:255',
@@ -92,6 +90,15 @@ class UserController extends Controller
                 'email' => 'required|email',
             ]);
 
+            $user = User::findOrFail($id);
+
+            $user->name = $request->input('name');
+            $user->age = $request->input('age');
+            $user->role = $request->input('role');
+            $user->email = $request->input('email');
+            $user->phone_number = $request->input('phone_number');
+            $user->gender = $request->input('gender');
+
             if ($request->hasFile('avatar')) {
                 $avatarPath = $request->file('avatar')->store('avatar', 'public');
                 $user->avatar = $avatarPath;
@@ -100,7 +107,6 @@ class UserController extends Controller
             $user->save(); 
 
             return redirect()->route('Users.index')->with('success', 'User updated successfully.');
-        }
 
     }
 

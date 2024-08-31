@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\WorkoutPlansController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/verify', [LoginController::class, 'verifyOtp']);
+Route::post('/register', [RegistrationController::class, 'register']);
 
 // Correct the update route to use PUT
 Route::put('users/update/{id}', [UserController::class, 'update'])->name('users.update');

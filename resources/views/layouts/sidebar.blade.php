@@ -20,4 +20,9 @@
       <i class="ni ni-single-02 text-red"></i> Trainers
     </a>
   </li>
+  <li class=" nav-item">
+    <a class="nav-link" href="{{ route('roles.index') }}">
+      <i class="ni ni-single-02 text-red"></i> Roles
+    </a>
+  </li>
 </ul>
