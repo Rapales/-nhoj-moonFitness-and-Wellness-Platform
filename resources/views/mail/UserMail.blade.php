@@ -59,7 +59,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="envelope">
-                    <h1 class="text-center">New User has Joined Our Community</h1>
+                    <h1 class="text-center">New User Joined Our Community</h1>
                     <div class="content">
                         <h3>Email:</h3>
                         <p>{{ $email }}</p>
