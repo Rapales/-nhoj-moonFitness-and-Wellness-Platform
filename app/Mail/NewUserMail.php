@@ -34,11 +34,6 @@ class NewUserMail extends Mailable
             subject: 'New User Account',
         );
     }
-
-    /**
-     * Get the message content definition.
-     */
-
      
     public function content(): Content
     {   
